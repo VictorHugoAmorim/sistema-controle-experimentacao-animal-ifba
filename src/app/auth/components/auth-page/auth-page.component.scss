@@ -1,0 +1,12 @@
+div:first-child{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+h1{
+  margin-bottom: 4rem;
+  color: rgb(33, 37, 41);
+}
