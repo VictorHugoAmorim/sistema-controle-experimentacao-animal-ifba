@@ -1,0 +1,28 @@
+<h1 mat-dialog-title *ngIf="!data.id">Cadastrar Docente</h1>
+<h1 mat-dialog-title *ngIf="data.id">Alterar Docente</h1>
+
+<div mat-dialog-content class="body" [formGroup]="form">
+  <mat-form-field appearance="fill">
+    <mat-label>Nome</mat-label>
+    <input formControlName="nome" matInput>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Matricula</mat-label>
+    <input formControlName="matricula" matInput type="number" (readonly)="data.id">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Nascimento</mat-label>
+    <input formControlName="nascimento" matInput [matDatepicker]="picker">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Departamento</mat-label>
+    <input formControlName="departamento" matInput>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-raised-button cdkFocusInitial *ngIf="data.id" color="primary" (click)="atualizar()">Alterar</button>
+  <button mat-raised-button cdkFocusInitial *ngIf="!data.id" color="primary" (click)="cadastrar()">Cadastrar</button>
+</div>

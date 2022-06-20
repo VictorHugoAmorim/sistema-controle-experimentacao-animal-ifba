@@ -1,0 +1,36 @@
+{
+  "docentes": [
+    {
+      "id": 123,
+      "nome": "daniel",
+      "matricula": 123,
+      "nascimento": "Fri May 06 2022 00:00:00 GMT-0300 (Horário Padrão de Brasília)",
+      "departamento": "coordernação"
+    }
+  ],
+  "discentes": [
+    {
+      "id": "1111",
+      "nome": "teset1",
+      "matricula": "1111",
+      "nascimento": "Wed Jun 01 2022 00:00:00 GMT-0300 (Horário Padrão de Brasília)",
+      "curso": "tew"
+    }
+  ],
+  "bioterios": [
+    {
+      "id": 2,
+      "nome": "qwerqwer1",
+      "departamento": "qwerqwer",
+      "especies": "qwerqwerqer"
+    }
+  ],
+  "animais": [],
+  "users": [
+    {
+      "email": "admin@email.com",
+      "password": "$2a$10$JDpnyyEfMlX94Fchr31lhOYMUH8NSEYVppIRRpnInYOQtm.kVwL.C",
+      "id": 1
+    }
+  ]
+}

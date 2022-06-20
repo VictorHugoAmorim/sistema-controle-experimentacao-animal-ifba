@@ -1,0 +1,22 @@
+<h1 mat-dialog-title *ngIf="!data.id">Cadastrar Biotério</h1>
+<h1 mat-dialog-title *ngIf="data.id">Alterar Biotério</h1>
+
+<div mat-dialog-content class="body" [formGroup]="form">
+  <mat-form-field appearance="fill">
+    <mat-label>Nome</mat-label>
+    <input formControlName="nome" matInput>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Departamento</mat-label>
+    <input formControlName="departamento" matInput>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Espécies</mat-label>
+    <input formControlName="especies" matInput>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-raised-button cdkFocusInitial *ngIf="data.id" color="primary" (click)="atualizar()">Alterar</button>
+  <button mat-raised-button cdkFocusInitial *ngIf="!data.id" color="primary" (click)="cadastrar()">Cadastrar</button>
+</div>

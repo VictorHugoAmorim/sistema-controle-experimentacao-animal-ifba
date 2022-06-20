@@ -1,0 +1,8 @@
+<div>
+  <h1>Sistema de Controle de Experimentação Animal</h1>
+  <mat-card [formGroup]="loginForm">
+    <app-user-input></app-user-input>
+    <app-password-input></app-password-input>
+    <app-login-button [auth]="loginForm.value" onkeypress="enter"></app-login-button>
+  </mat-card>
+</div>
